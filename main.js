@@ -24,7 +24,7 @@ const KTX2_LOADER = new KTX2Loader(MANAGER).setTranscoderPath(
 );
 const renderer = new THREE.WebGLRenderer();
 const camera = new THREE.PerspectiveCamera(
-    0.2,
+    10,
     window.innerWidth / window.innerHeight,
     0.01,
     1000 );
@@ -44,7 +44,7 @@ var neutralEnvironment = pmremGenerator.fromScene(new RoomEnvironment()).texture
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(backgroundColor);
 //camera.position.set(0, 10, 1);
-renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( window.innerWidth/2, window.innerHeight/2);
 
 function addLights()
 {
@@ -85,15 +85,15 @@ function animate()
     controls.update();
     renderer.render(scene, camera);
 }
-loader.load('hammer.glb', function ( gltf )
+loader.load('solar_system_custom.glb', function ( gltf )
     {
         object3d = gltf.scene;
         box = new Box3().setFromObject(object3d);
         size = box.getSize(new Vector3()).length();
         center = box.getCenter(new Vector3());
         console.log(center);
-        // object3d.position.x -= center.x;
-        // object3d.position.y -= center.y;
+        //object3d.position.x -= center.x;
+        object3d.position.y -= center.y;
         // object3d.position.z -= center.z;
         // controls.maxDistance = size * 10;
         // camera.near = size / 100;
@@ -120,4 +120,4 @@ loader.load('hammer.glb', function ( gltf )
 
 addControls();
 addLights();
-document.body.appendChild( renderer.domElement );
+document.getElementById('model').appendChild( renderer.domElement );
