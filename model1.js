@@ -6,13 +6,13 @@ text.open('GET', 'text_backup.txt');
 text.onreadystatechange = function() {
     console.log(text.responseText);
 
-    var textElement = document.getElementsByClassName('row')[2];
+    var textElement = document.getElementsByClassName('row')[1];
     textElement.innerHTML = text.responseText;
 }
 text.send();
 
 export const model1 = [
-    new TitleBlock('страница1', {
+    new TitleBlock('Введение. Строение и эволюция Вселенной', {
         tag: 'h2',
         styles: {
             background: 'linear-gradient(to bottom, black, #8e2de2)', /*linear-gradient(to right, #ff0099, #493240)*/
@@ -21,7 +21,7 @@ export const model1 = [
             'text-align': 'center'
         }
     }),
-    new ImageBlock(image, {
+/*    new ImageBlock(image, {
             styles: {
                 padding: '1rem 0',
                 display: 'flex',
@@ -32,7 +32,7 @@ export const model1 = [
                 height: 'auto'
             },
             alt: 'Это картинка'
-        }),
+        }),*/
     new TextBlock(text, {
         styles: {
             background: '#20124d',

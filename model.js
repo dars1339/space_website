@@ -1,4 +1,4 @@
-//import image from './space_main.jpg'
+import image from './space_main.jpg'
 import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock} from './blocks'
 
 const text = 'main text'
@@ -11,7 +11,7 @@ const text = 'main text'
 });*/
 
 export const model = [
-    new TitleBlock('типа красивое название', {
+    new TitleBlock('Пособие по астрономии для учеников основной школы', {
         tag: 'h2',
         styles: {
             background: 'linear-gradient(to bottom, black, #8e2de2)', /*linear-gradient(to right, #ff0099, #493240)*/
@@ -20,18 +20,6 @@ export const model = [
             'text-align': 'center'
         }
     }),
-/*    new ImageBlock(image, {
-        styles: {
-            padding: '1rem 0',
-            display: 'flex',
-            'justify-content': 'center'
-        },
-        imageStyles: {
-            width: '500px',
-            height: 'auto'
-        },
-        alt: 'Это картинка'
-    }),*/
     new ColumnsBlock([
         'колонка текста1',
         'колонка текста2',
@@ -44,13 +32,25 @@ export const model = [
             'font-weight': 'bold'
         }
     }),
-    new TextBlock(text, {
+    new ImageBlock(image, {
+        styles: {
+            padding: '1rem 0',
+            display: 'flex',
+            'justify-content': 'center'
+        },
+        imageStyles: {
+            width: '1000px',
+            height: 'auto'
+        },
+        alt: 'Это картинка'
+    }),
+/*    new TextBlock(text, {
         styles: {
             background: '#20124d',
             padding: '1rem',
             color:'#eeeeee',
             'font-weight': 'bold'
         }
-    })
+    })*/
 
 ]

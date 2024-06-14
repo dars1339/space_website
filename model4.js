@@ -12,7 +12,7 @@ text.onreadystatechange = function() {
 text.send();
 
 export const model1 = [
-    new TitleBlock('страница4', {
+    new TitleBlock('Галактики', {
         tag: 'h2',
         styles: {
             background: 'linear-gradient(to bottom, black, #8e2de2)', /*linear-gradient(to right, #ff0099, #493240)*/
