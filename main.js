@@ -24,7 +24,7 @@ const KTX2_LOADER = new KTX2Loader(MANAGER).setTranscoderPath(
 );
 const renderer = new THREE.WebGLRenderer();
 const camera = new THREE.PerspectiveCamera(
-    10,
+    20,
     window.innerWidth / window.innerHeight,
     0.01,
     1000 );
@@ -85,7 +85,7 @@ function animate()
     controls.update();
     renderer.render(scene, camera);
 }
-loader.load('solar_system_custom.glb', function ( gltf )
+loader.load('planet_earth.glb', function ( gltf )
     {
         object3d = gltf.scene;
         box = new Box3().setFromObject(object3d);

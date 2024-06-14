@@ -1,12 +1,18 @@
 import image from './space_main.jpg'
-import {TextBlock, TitleBlock,  ImageBlock} from '../blocks'
+import {TextBlock, TitleBlock,  ImageBlock} from './blocks'
 
-const text = `
-страница1
-`
+const text = new XMLHttpRequest();
+text.open('GET', 'text_backup.txt');
+text.onreadystatechange = function() {
+    console.log(text.responseText);
+
+    var textElement = document.getElementsByClassName('row')[2];
+    textElement.innerHTML = text.responseText;
+}
+text.send();
 
 export const model1 = [
-    new TitleBlock('бебебе', {
+    new TitleBlock('страница1', {
         tag: 'h2',
         styles: {
             background: 'linear-gradient(to bottom, black, #8e2de2)', /*linear-gradient(to right, #ff0099, #493240)*/
@@ -29,8 +35,9 @@ export const model1 = [
         }),
     new TextBlock(text, {
         styles: {
-            background: 'linear-gradient(to left, #f2994a, #f2c94c)',
+            background: '#20124d',
             padding: '1rem',
+            color:'#eeeeee',
             'font-weight': 'bold'
         }
     })

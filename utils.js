@@ -23,12 +23,11 @@ export function block(type) {
       </div>-->
     <a class="btn btn-primary" href="index.html" role="button">главная</a>
     <a class="btn btn-primary" href="index1.html" role="button">страница1</a>
-    <a class="btn btn-primary" href="index1.html" role="button">страница2</a>
-    <a class="btn btn-primary" href="index1.html" role="button">страница3</a>
-    <a class="btn btn-primary" href="index1.html" role="button">страница4</a>
-    <a class="btn btn-primary" href="index1.html" role="button">страница5</a>
-    <a class="btn btn-primary" href="index1.html" role="button">страница6</a>
-    <a class="btn btn-primary" href="index1.html" role="button">страница7</a>
+    <a class="btn btn-primary" href="index2.html" role="button">страница2</a>
+    <a class="btn btn-primary" href="index3.html" role="button">страница3</a>
+    <a class="btn btn-primary" href="index4.html" role="button">страница4</a>
+    <a class="btn btn-primary" href="index5.html" role="button">страница5</a>
+    <a class="btn btn-primary" href="index6.html" role="button">страница6</a>
     </form>
     <hr />
   `

@@ -1,15 +1,7 @@
 //import image from './space_main.jpg'
 import {TextBlock, TitleBlock, ColumnsBlock, ImageBlock} from './blocks'
 
-const text = new XMLHttpRequest();
-text.open('GET', 'text1(2).txt');
-text.onreadystatechange = function() {
-    console.log(text.responseText);
-
-    var textElement = document.getElementsByClassName('row')[2];
-    textElement.innerHTML = text.responseText;
-}
-text.send();
+const text = 'main text'
 /*$.get('/docs/file.txt',{},function(content){
     let lines=content.split('\n');
 
@@ -52,10 +44,11 @@ export const model = [
             'font-weight': 'bold'
         }
     }),
-    new TextBlock(text.responseText, {
+    new TextBlock(text, {
         styles: {
-            background: 'linear-gradient(to left, #f2994a, #f2c94c)',
+            background: '#20124d',
             padding: '1rem',
+            color:'#eeeeee',
             'font-weight': 'bold'
         }
     })
